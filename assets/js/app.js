@@ -4,11 +4,12 @@ const guntingBtn = document.querySelector('.gunting');
 const kertasBtn = document.querySelector('.kertas');
 const hasil = document.querySelector('.hasil');
 const bot = document.querySelector('.bot');
+const playerAnswer = document.querySelector('.playerAnswer');
 const pScore = document.querySelector('.player-score');
 const bScore = document.querySelector('.bot-score');
 const rstScore = document.querySelector('.reset-score');
 const playerWin = 'Kamu Menang';
-const botWin = 'Bot Menang';
+const botWin = 'Computer Menang';
 const draw = 'Draw';
 let playerScore = 0;
 let botScore = 0;
@@ -25,6 +26,8 @@ function resetScore() {
   botScore = 0;
   bScore.innerHTML = botScore;
   pScore.innerHTML = playerScore;
+  bot.innerHTML = '';
+  hasil.innerHTML = 'HASIL';
 }
 
 function addBotScore() {
@@ -46,6 +49,7 @@ function batu() {
   //randoming bot answer
   const jawabanBot = botAnswer();
   bot.innerHTML = jawabanBot.toUpperCase();
+  playerAnswer.innerHTML = 'BATU';
 
   if (jawabanBot === 'batu') {
     hasil.innerHTML = draw.toUpperCase();
@@ -61,6 +65,7 @@ function gunting() {
   //randoming bot answer
   const jawabanBot = botAnswer();
   bot.innerHTML = jawabanBot.toUpperCase();
+  playerAnswer.innerHTML = 'GUNTING';
 
   if (jawabanBot === 'batu') {
     hasil.innerHTML = botWin.toUpperCase();
@@ -76,6 +81,7 @@ function kertas() {
   //randoming bot answer
   const jawabanBot = botAnswer();
   bot.innerHTML = jawabanBot.toUpperCase();
+  playerAnswer.innerHTML = 'KERTAS';
 
   if (jawabanBot === 'batu') {
     hasil.innerHTML = playerWin.toUpperCase();
