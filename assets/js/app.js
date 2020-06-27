@@ -21,7 +21,6 @@ rstScore.addEventListener('click', resetScore);
 pScore.innerHTML = playerScore;
 bScore.innerHTML = botScore;
 
-//reset
 function resetScore() {
   playerScore = 0;
   botScore = 0;
@@ -29,6 +28,7 @@ function resetScore() {
   pScore.innerHTML = playerScore;
   bot.innerHTML = '';
   hasil.innerHTML = 'HASIL';
+  playerAnswer.innerHTML = '';
 }
 
 function addBotScore() {
