@@ -21,6 +21,7 @@ rstScore.addEventListener('click', resetScore);
 pScore.innerHTML = playerScore;
 bScore.innerHTML = botScore;
 
+//reset
 function resetScore() {
   playerScore = 0;
   botScore = 0;
