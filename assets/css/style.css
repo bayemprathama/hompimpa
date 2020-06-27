@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 /* reset */
 * {
   box-sizing: border-box;
@@ -6,7 +5,7 @@
   margin: 0;
 }
 body {
-  padding: 3rem 1rem;
+  padding: 1rem 1rem;
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
@@ -20,13 +19,14 @@ a {
 
 /* style */
 .container {
-  border: 2px solid #1e90ff;
+  border: 3px solid #1e90ff;
   padding: 2rem 0;
 }
 .choose-txt {
   margin: 2rem;
 }
 .btn {
+  display: inline-block;
   padding: 10px 20px;
   background: #1e90ff;
   border-radius: 5px;
@@ -36,16 +36,32 @@ a {
 .btn:active {
   background: #4169e1;
 }
-.bot {
-  transition: all 0.2s ease;
+
+.player-answer {
+  margin: 1rem 0 1rem;
 }
 .bot-answer {
-  margin: 4rem 0 1rem;
+  margin: 0 0 2rem;
 }
-
+.result {
+  display: inline-block;
+  padding: 0 0.5rem;
+  background: #fff;
+  position: absolute;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  top: -10px;
+}
+.container-hasil {
+  position: relative;
+  border: 2px solid #1e90ff;
+  width: 280px;
+  margin: 3rem auto 0;
+  padding: 1rem 0;
+}
 .score {
   margin: 1rem auto;
-  /* border: 2px solid #1e90ff; */
 }
 table,
 th,
@@ -58,6 +74,7 @@ td {
   margin: 3rem 0 0;
 }
 .reset-score {
+  width: 150px;
   display: inline-block;
 }
 .bot-score,
